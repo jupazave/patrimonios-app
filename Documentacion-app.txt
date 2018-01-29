@@ -1,0 +1,59 @@
+
+compilar: cordova run android
+
+============================================================
+
+[www/index.html]
+
+Página principal de la aplicación móvil
+
+Hace referencia a estos archivos de javascript
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="vendor/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/informacion.js"></script>
+        <script type="text/javascript" src="js/busqueda.js"></script>
+        <script type="text/javascript" src="js/comunidades.js"></script>
+        <script type="text/javascript" src="js/colecciones.js"></script>
+        <script type="text/javascript" src="vendor/jqm/jquery.mobile-1.4.5.min.js"></script>
+
+[www/js]
+
+busqueda.js: Se conecta con el URL_SOLR para realizar la búsqueda.
+
+colecciones.js: Carga las colecciones de Dspace.
+
+comunidades.js: Carga las comunidades de Dspace.
+
+index.js: Es el "main", aquí se encuentran funciones para manejar los Items.
+
+informacion.js: Por el momento innecesario...
+
+
+===========================================================
+
+[www/php]
+
+Esta sección incluye una forma de monitorear las búsquedas a través de una base de datos local MySQL.
+
+Insertar en la base de datos NO es necesario.
+
+Por el momento, ignorar la carpeta de "laravel".
+
+El "main" es busqueda.php
+
+Pruebas: con Xampp.
+
+
+=========================================================
+
+[PLUGINS]
+
+cordova plugin add cordova-plugin-whitelist
+
+cordova plugin add cordova-plugin-inappbrowser
+cordova plugin add cordova-plugin-device
+cordova plugin add cordova-plugin-splashscreen
+cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
+cordova plugin add cordova-plugin-geolocation

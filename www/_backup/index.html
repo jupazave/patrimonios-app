@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="vendor/flatui/jquery.mobile-1.4.5-flatui.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+        <title>Repositorio de Patrimonios de Yucatán</title>
+    </head>
+    <body>
+        <!--<div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        -->
+
+        <!-- Cabecera -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a href="#" data-role="button" data-inline="true" data-rel="back" data-icon="carat-l">atrás</a>
+            <h4>Repositorio Patrimonios de Yucatán</h4>
+        </div>
+
+        <!-- Secciones -->
+        <div data-role="page" id="page_Search">
+            <div data-role="content">
+                <div>
+                    <form id="form_Search">
+                        <label>Buscar en el repositorio: </label>
+                        <input data-mini="true" name="txtf_Search" type="search" id="">
+                    </form>
+                </div>
+
+                <div id="div_Info">
+                    <div>
+                        <img class="edificio"src="img/catedral_merida.jpg">
+                    </div>
+
+                    <p class="etiqueta"><b>Bienvenido</b></p>
+                    <p>
+                        Esta es la app de Patrimonios.
+                    </p>
+
+                    <p class="etiqueta"><b>Comunidades</b></p>
+                    <p>
+                        Comunidades.
+                    </p>
+
+                    <ul id=""></ul>
+
+                    <p class="etiqueta"><b>Buscador</b></p>
+                    <p>
+                        Usa el campo de texto para buscar.
+                    </p>
+                </div>
+
+                <div id="div_List">
+                    <p style="display: none;" id=""></p>
+                    <ul id="" 
+                        data-role="listview"
+                        data-inset="true"
+                        data-divider-theme="a"
+                        data-theme="c">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="page_Communities">
+            <div data-role="content">
+                <ul id="table_Communities" 
+                    data-role="listview" 
+                    data-inset="true" 
+                    data-divider-theme="a" 
+                    data-theme="c">
+                </ul>
+            </div>
+        </div>
+
+        <!-- Popup Message -->
+        <div data-role="page">
+            <div data-role="popup" id="popup_Message" data-theme="a" data-transition="pop">
+                <div data-role="header" class="ui-header">
+                    <h3 style="text-align: center;">Aviso</h3>
+                </div>
+                <div data-role="content" class="ui-content">
+                    <h4 id="dlgMensajeTexto"></h4>
+                    <button id="btnOkMensaje"
+                            class="ui-btn ui-corner-all" 
+                            onclick="$.mobile.back()"
+                            data-theme="c">Entendido</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de hasta abajo -->
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page_Search" data-icon="search">Buscador</a></li>
+                    <li><a href="#" data-icon="bullets">Comunidades</a></li>
+                    <li><a href="#" data-icon="gear">Configuración</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Javascripts -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="vendor/jquery.js"></script>
+        <script type="text/javascript" src="vendor/jqm/jquery.mobile-1.4.5.min.js"></script>
+
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
