@@ -15,8 +15,6 @@
         <!--content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:; connect-src 'self' https://demo.dspace.org">-->
 
         <meta name="Content-Security-Policy" content="default-src 'self' https://redi.uady.mx data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-
-        <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"> -->
         
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -33,7 +31,9 @@
     <body>
 
         <div data-role="page" id="pagBuscar">
+
             <div data-role="content">
+
                 <div>
                     <form id="formBuscar">
                         <label>Buscar en el repositorio:</label>
@@ -42,8 +42,9 @@
                 </div>
 
                 <div id="divContenido">
+
                     <div>
-                        <img src="img/catedral_merida.jpg" class="edificio">
+                        <img src="img/catedral_merida.jpeg" class="edificio">
                     </div>
 
                     <p class="etiqueta"><b>¡Bienvenido al Repositorio!</b></p>
@@ -59,8 +60,7 @@
                         estas son las disponibles:
                     </p>
 
-                    <ul id="listaComunidades">
-                    </ul>
+                    <ul id="listaComunidades"></ul>
                     
                     <p class="etiqueta"><b>Utiliza el buscador</b></p>
                     <p>
@@ -72,7 +72,6 @@
                     <p>
                         Puedes utilizar el mapa para identificar dónde estás y observar el patrimonio del estado de Yucatán.
                     </p>
-
                 </div>
 
                 <div id="divLista">
@@ -88,6 +87,7 @@
         </div>
 
         <div data-role="page" id="pagComunidades">    
+
             <div data-role="content">
                 <ul id="tablaComunidades" 
                     data-role="listview" 
@@ -98,7 +98,8 @@
             </div>
         </div>
 
-        <div data-role="page" id="pagColecciones"> 
+        <div data-role="page" id="pagColecciones">
+
             <div data-role="content">
                 <h3 id="nombreComunidad"><b>Comunidad</b></h3>
                 <h3 style="display: none;" id="msgNoHayColecciones">Parece que aún no existen colecciones en esta comunidad</h3>
@@ -115,7 +116,7 @@
 
             <div data-role="content">
                 <h3 id="nombreColeccion"><b>Colección</b></h3>
-                <h3 style="display: none;" id="msgNoHayItemsColeccion">Parece que aún no existen documentos en esta colección</h3>
+                <h3 style="display: none;" id="msgNoHayItemsColeccion">Parece que aún no existen lugares en esta colección</h3>
                 <ul id="tablaColecItems" 
                     data-role="listview" 
                     data-inset="true"
@@ -123,7 +124,6 @@
                     data-theme="c">
                 </ul>
             </div>
-            
         </div>
         
         <div data-role="page" id="pagDetalleItem">
@@ -144,25 +144,6 @@
                         
                     </ul>
                 </div>
-                
-                <!--<p class="etiqueta"><b>Titulo:</b></p>
-                <p id="dcTitle"></p>
-                
-                <p class="etiqueta"><b>Palabras clave:</b><p>
-                <ul id="keywords" 
-                    data-theme="c"
-                    data-role="listview" 
-                    data-inset="true">
-                </ul>
-                
-                <p class="etiqueta"><b>Creador:</b></p>
-                <p id="dcCreator"></p>
-                
-                <p class="etiqueta"><b>Fecha de creación:</b></p>
-                <p id="dcDate"></p>
-
-                <p class="etiqueta"><b>Identificador:</b><p>
-                <p id="dcIdentifierUri"></p>-->
 
                 <p class="etiqueta"><b>Nombre:</b><p>
                 <p id="arqNombre"></p>
@@ -240,13 +221,13 @@
                 <p id="arqAcabados"></p>
 
                 <p class="etiqueta"><b>Materiales:</b><p>
-                <ul id="arqMateriales"></ul>
+                <p id="arqMateriales"></p>
 
                 <p class="etiqueta"><b>Gallinas ciegas:</b><p>
                 <p id="arqGallinasCiegas"></p>
 
                 <p class="etiqueta"><b>Bienes, muebles y elementos significativos relevantes:</b><p>
-                <ul id="arqBienes"></ul>
+                <p id="arqBienes"></p>
 
                 <p class="etiqueta"><b>Observaciones de bienes, muebles y elementos:</b><p>
                 <p id="arqObservBienes"></p>
@@ -260,41 +241,19 @@
                 <p class="etiqueta"><b>Longitud:</b><p>
                 <p id="arqLongitud"></p>
 
-                <!--<p class="etiqueta"><b>Ubicación en Google Maps:</b><p>
-                <p><a id="arqGoogleUbic" href=""></a></p>-->
-
                 <p class="etiqueta"><b>Más información:</b><p>
                 <div class="moreInfo">
                     <a id="moreInfoSearch" href=""><img src="img/google.png"></a>
                     <a id="moreInfoMap" href=""><img src="img/google-maps.png"></a>
                 </div>
-                
             </div>
-           
         </div>
 
         <div data-role="page" id="pagMapa">
-            
-            <!--<div data-role="content">
-                <p>
-                    Para un ahorro de datos móviles la aplicación guarda algunos datos en el caché, 
-                    si quieres eliminarlos pulsa en el botón de abajo.
-                </p>
-
-                <button id="btnBorrarCache" class="ui-btn ui-btn-b ui-corner-all ui-btn-icon-left ui-icon-minus">
-                    Borrar chaché
-                    AIzaSyDLuGrxtLeQuTbXo1H7tbj4CNrsvbGMmOg
-                </button>
-            </div>-->
 
             <div data-role="content" role="main" class="ui-content" id="map-canvas">
                 <!-- map loads here... -->
             </div>
-
-        </div>
-
-        <div data-role="page">
-            
         </div>
         
         <div data-role="page">
@@ -322,7 +281,6 @@
                 <ul>
                     <li><a href="#pagBuscar" data-icon="search">Buscador</a></li>
                     <li><a href="#pagComunidades" data-icon="bullets">Comunidades</a></li>
-                    <!--<li><a href="#pagConfiguracion" data-icon="gear">Configuración</a></li>-->
                     <li><a href="#pagMapa" data-icon="location">Mapa</a></li>
                 </ul>
             </div>
@@ -336,9 +294,11 @@
         <script type="text/javascript" src="js/busqueda.js"></script>
         <script type="text/javascript" src="js/comunidades.js"></script>
         <script type="text/javascript" src="js/colecciones.js"></script>
-        <script type="text/javascript" src="vendor/jqm/jquery.mobile-1.4.5.min.js"></script>
-        
-        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
         <script type="text/javascript" src="js/mapa.js"></script>
+        <!--<script src="https://maps.google.com/maps/api/js?sensor=false"></script>-->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.30&key=AIzaSyAUcyXC7Xlvm3KuPurwyuvg9DwQLuHdIPU"></script>
+
+        <!-- Este último src siempre se debe de dejar a lo último -->
+        <script type="text/javascript" src="vendor/jqm/jquery.mobile-1.4.5.min.js"></script>
     </body>
 </html>

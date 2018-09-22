@@ -57,3 +57,6 @@ cordova plugin add cordova-plugin-device
 cordova plugin add cordova-plugin-splashscreen
 cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
 cordova plugin add cordova-plugin-geolocation
+cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyAUcyXC7Xlvm3KuPurwyuvg9DwQLuHdIPU"
+
+//cordova plugin rm org.apache.cordova.geolocation

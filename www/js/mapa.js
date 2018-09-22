@@ -1,16 +1,6 @@
 var CURRENT_POSITION_MARKER = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
 var PATRIMONIO_MARKER = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
 
-/*$( document ).on( "pageinit", "#pagMapa", function() {
-    var defaultLatLng = new google.maps.LatLng(20.9802, -89.7029);  // Default to Mérida when no geolocation support
-    if ( navigator.geolocation ) {
-        // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
-        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:false, timeout: 20000});
-    } else {
-        drawMap(defaultLatLng);  // No geolocation support, show default map
-    }
-});*/
-
 function initMapa(){
 
     mostrarCargando();
@@ -50,7 +40,10 @@ function success(pos) {
 }
 
 function fail(error) {
+    //var defaultLatLng = new google.maps.LatLng(20.9802, -89.7029);
     //drawMap(defaultLatLng);  // Failed to find location, show default map
+    ocultarCargando();
+    mostrarMensaje("Aviso","Active su ubicación desde Ajustes -> Ubicación.");
     console.warn('ERROR(' + error.code + '): ' + error.message);
 }
 

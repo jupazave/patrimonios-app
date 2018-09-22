@@ -1,9 +1,9 @@
 // var URL = 'http://redi.uady.mx/rest/';
 // var BITSTREAM_URL = 'http://redi.uady.mx'; //Sin slash
 
-var URL = 'http://192.168.230.108:8080/rest/';
-var BITSTREAM_URL = 'http://192.168.230.108:8080'; //Sin slash
-var BITSTREAM_VIEWER = 'http://192.168.230.108:8080/xmlui/bitstream/handle/'
+var URL = 'http://148.209.67.83:8080/rest/';
+var BITSTREAM_URL = 'http://148.209.67.83:8080'; //Sin slash
+var BITSTREAM_VIEWER = 'http://148.209.67.83:8080/xmlui/bitstream/handle/'
 
 //Demo url: https://demo.dspace.org/rest/
 
@@ -16,7 +16,8 @@ var METADATOS_BUSQUEDA = [
 
 /* Va sin slash final, dado que si lo tiene sale como GET */
 //var URL_SOLR = "http://redi.uady.mx:8080/busqueda-movil";
-var URL_SOLR = "http://192.168.230.108/patrimonios-search/busqueda.php";
+//var URL_SOLR = "http://148.209.67.83/patrimonios-search/busqueda.php";
+var URL_SOLR = "http://148.209.67.83:8080/patrimonios-search/busqueda.php";
 
 /*Si se quiere la carga dinamica con Scroll activar la variable y cambiar el maximo*/
 var MAXIMO = 10000;

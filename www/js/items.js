@@ -77,7 +77,7 @@ function mostrarMetadatosItem(uuid) {
 }
 
 function colocarMetadatos(metadatos) {
-    //var creadores = "";
+
     var valPertenencia = "";
     var valEpoca = "";
     var valSisEstructPresbiterio = "";
@@ -86,23 +86,13 @@ function colocarMetadatos(metadatos) {
     var valMateriales = "";
     var valBienes = "";
     var moreInfoString = "";
+
     for (var i = 0; i < metadatos.length; i++) {
+
         var llave = metadatos[i].key;
         var valor = metadatos[i].value;
+
         switch (llave) {
-            /*case "dc.title":
-                $("#dcTitle").text(valor);
-                break;
-            case "dc.creator":
-                //creadores = valor + "; " + creadores;
-                $("#dcCreator").text(valor);
-                break;
-            case "dc.date":
-                $("#dcDate").text(valor);
-                break;
-            case "dc.identifier.uri":
-                $("#dcIdentifierUri").text(valor);
-                break;*/
             case "arq.Nombre":
                 moreInfoString = moreInfoString + valor + "+";
                 $("#arqNombre").text(valor);
@@ -205,9 +195,8 @@ function colocarMetadatos(metadatos) {
             case "arq.ObservGenerales":
                 $("#arqObservGenerales").text(valor);
                 break;
-            /*case "arq.GoogleUbic":
-                $("#arqGoogleUbic").text(valor);
-                $("#arqGoogleUbic").attr("href",valor);
+            /*case "arq.SearchString":
+                moreInfoString = valor;
                 break;*/
             case "arq.Latitud":
                 localStorage.itemLat = valor;
@@ -230,47 +219,7 @@ function colocarMetadatos(metadatos) {
         console.log("Bitstreams de: " + localStorage.itemUUID);
         mostrarRecursosItem(localStorage.itemUUID);
     });
-    
-    /*
-        $("#keywords li").on("tap", function (e) {
-            e.preventDefault();
-            var nombre = $(this).text();
-            $("#formBuscar input[name='buscar']").val(nombre);
-            $("#formBuscar").submit();
-            $(":mobile-pagecontainer").pagecontainer("change", "#pagBuscar");
-        });
-    */
 }
-
-/*function mostrarRecursosItem(uuid) {
-    mostrarCargando();
-    $("#listaRecursosItem").html("").listview('refresh');
-    $.ajax( datosAjax(URL + "items/" + uuid + "/bitstreams") ).done(function (resp) {
-        var linea = "";
-        for (var i = 0; i < resp.length; i++) {
-            linea = linea + "<li data-icon='arrow-d'><a href='" +
-                    resp[i].retrieveLink + "'>" +
-                    resp[i].name +
-                    " (" + resp[i].sizeBytes + " bytes)</a>" +
-                    "<p style='display: none;'>" + resp[i].mimeType + "</p></li>";
-        }
-        $("#listaRecursosItem").html(linea).listview('refresh');
-
-        $("#listaRecursosItem li").on("tap", function (e) {
-            var a = $(this).find("a")[0];
-            var url = $(a).attr("href");
-            url = BITSTREAM_URL + url;
-            var browser = cordova.InAppBrowser.open(url, '_system');
-            browser.addEventListener('loaderror', function (e) {
-                alert(e.message);
-            });
-        });
-
-        $("#btnRecursoItem").attr("disabled", "");
-        $("#listaRecursosItem").show();
-        ocultarCargando();
-    });
-}*/
 
 function mostrarRecursosItem(uuid) {
 
@@ -316,14 +265,6 @@ function mostrarRecursosItem(uuid) {
 }
 
 function reiniciarDetalleItem() {
-    
-    /*$("#nombreItem").text("Sin título");
-    $("#creador").text("Sin autor");
-    $("#resumen").text("Sin resumen");
-    $("#keywords").html("").listview('refresh');
-    $("#fechaPub").text("Sin fecha de publicación");
-    $("#issn").text("Sin ISSN");*/
-
     //Reiniciar cada valor de la lista
     $("#arqNombre").html("<i>Sin nombre</i>");
     $("#arqDireccion").html("<i>Sin dirección</i>");
