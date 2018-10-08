@@ -1,6 +1,13 @@
-/hooks
-/node_modules
-/platforms
-/plugins
-/res
-.env
+### ApacheCordova ###
+# Apache Cordova generated files and directories
+bin/*
+!/plugins
+!/plugins/android.json
+!/plugins/fetch.json
+plugins/*
+platforms/*
+
+node_modules
+www/index.js
+js/**/*.js
+js/**/*.js.map
