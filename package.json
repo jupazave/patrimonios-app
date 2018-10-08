@@ -1,6 +1,6 @@
 {
-  "name": "helloworld",
-  "displayName": "HelloCordova",
+  "name": "patrimonio-aqruitectonico",
+  "displayName": "Patimonio Arquitectónico",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
@@ -10,12 +10,14 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
-    "cordova-android": "^7.0.0",
-    "cordova-plugin-device": "^1.1.6",
+    "cordova-android": "^7.1.1",
+    "cordova-browser": "^5.0.4",
+    "cordova-ios": "^4.5.5",
+    "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-geolocation": "^4.0.1",
-    "cordova-plugin-inappbrowser": "^1.7.1",
+    "cordova-plugin-inappbrowser": "^1.7.2",
     "cordova-plugin-splashscreen": "git+https://github.com/apache/cordova-plugin-splashscreen.git",
-    "cordova-plugin-whitelist": "^1.3.2"
+    "cordova-plugin-whitelist": "^1.3.3"
   },
   "cordova": {
     "plugins": {
@@ -26,7 +28,9 @@
       "cordova-plugin-geolocation": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios",
+      "browser"
     ]
   }
 }
